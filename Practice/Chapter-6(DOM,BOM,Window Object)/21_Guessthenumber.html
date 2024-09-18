@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+
+<body>
+    <script>
+        let num = Math.round((Math.random()) * 100);
+        console.log(num);
+        let guesses = 0;
+        let guess = prompt("Enter the number");
+
+
+        while (guess !== num); {
+
+            guesses++;
+
+
+            if (num == guess) {
+                console.log("You have guessed the number in" + " " + guesses + " " + (guesses == 1 ? "time" : "times"));
+
+            } else if (num < guess) {
+                console.log("Your number is greater than the number");
+            } else if (num > guess) {
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

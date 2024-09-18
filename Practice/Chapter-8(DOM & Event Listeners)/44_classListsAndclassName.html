@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class lists and Name</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .yellow {
+            background-color: yellow;
+            color: white;
+
+        }
+
+        .red {
+            background-color: red;
+            color: white;
+        }
+
+        .text-dark {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first" class="yellow text-dark">
+        <span>I am Good</span>
+    </div>
+
+    <script>
+        first.className = "text-dark red"
+        first.classList
+
+        // Add  or remove 
+        first.classList.remove("red");
+        first.classList.add("red");
+
+        // Use toggle if not their it adds otherwise removes
+        first.classList.toggle("yellow");
+
+        // Contains to check if it is there or not
+        first.classList.contains("red");
+    </script>
+</body>
+
+</html>

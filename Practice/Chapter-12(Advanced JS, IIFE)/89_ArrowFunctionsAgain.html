@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions revisited</title>
+</head>
+
+<body>
+    <script>
+        let greeting = () => console.log("Hello" + " " + "How are you")
+        let greeting2 = name => console.log("Hello " + name + " How are you ?")
+        greeting("Good afternoon");
+        greeting2("Good afternoon")
+
+        const x = {
+            name: "Gautam",
+            role: " JS Developer",
+            exp: 30,
+            show: function () {
+                // let that = this
+                // console.log(this)
+                setTimeout(() => {
+                    console.log(`The name is ${this.name}\nThe role is ${this.role}`)
+                }, 2000)
+            }
+        }
+        console.log(this.name, this.role)
+    </script>
+
+</body>
+
+</html>

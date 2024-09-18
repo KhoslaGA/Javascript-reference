@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loops</title>
+</head>
+
+<body>
+    <script>
+        // For loops help print repeated actions
+        // Let has block-level scope and var has global scope.
+
+        // 1.For loop
+        let sum = 0;
+        let n = prompt("Enter the value of n");
+        n = Number.parseInt(n);
+        for (let i = 0; i < n; i++) {
+            sum += (i + 1);
+        }
+        console.log("Sum of first" + n + "natural numbers is " + sum);
+
+
+        // 2. for in loop
+
+        let obj = {
+            harry: 90,
+            shubh: 45,
+            shivika: 56,
+            ritika: 98,
+            shiv: 23
+        }
+
+        for (let key in obj) {
+
+            console.log(" Marks of " + key + " are " + obj[key]);
+        }
+
+        // 3. For-of loop
+
+        for (let b of "harry") {
+            console.log(b);
+
+        }
+    </script>
+
+</body>
+
+</html>

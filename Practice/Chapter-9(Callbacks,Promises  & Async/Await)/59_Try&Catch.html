@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try and Catch</title>
+</head>
+
+<body>
+
+    <script>
+        setTimeout(() => {
+            console.log("Hacking wifi.. Please wait....")
+        }, 1000)
+
+
+        // console.log throws an error and stops the code execution
+        // console.log(rahul)
+
+        // using try and catch
+        try {
+            console.log(rahul)
+        }
+        // catch(err)- err variable in this has error object in it.
+        catch (err) {
+            console.log("Balle Balle" + err)
+
+        }
+        setTimeout(() => {
+            console.log("Fetching Name..... Please wait....")
+        }, 3000)
+        setTimeout(() => {
+            console.log("Fetching Phone number.....Please wait....")
+        }, 4000)
+        setTimeout(() => {
+            console.log("Fetching facebook id.... Please wait....")
+        }, 5000)
+        setTimeout(() => {
+            console.log("Fetching Address... Please wait....")
+        }, 6000);
+    </script>
+
+</body>
+
+</html>

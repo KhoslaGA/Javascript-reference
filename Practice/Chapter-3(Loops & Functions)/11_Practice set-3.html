@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javacript practice set 3</title>
+</head>
+
+<body>
+    <script>
+        let marks = {
+            harry: 90,
+            shubham: 10,
+            lovish: 56,
+            Monika: 4
+
+        }
+        //   Question 1- For loop
+        // Object.keys(marks)[i] = keys ki value deta hai
+        for (let i = 0; i < Object.keys(marks).length; i++) {
+            console.log("The Marks of" + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]]);
+        }
+
+        // Question 2- For in loop
+        for (let ikey in marks) {
+            console.log("The Marks of" + Object.keys(marks)[ikey] + " are " + marks[Object.keys(marks)[ikey]]);
+        }
+
+        //Question 3- Correct number
+        let cn = 4;
+        let i
+        while (i != cn) {
+            console.log("Try again");
+            i = prompt("enter a number");
+
+        }
+        console.log("You have entered a correct number");
+
+        // Question 4- Mean of 5 numbers
+        const mean = (a, b, c, d, e) => {
+            return (a + b + c + d + e) / 5;
+        }
+        console.log(mean(4, 5, 6, 7, 8));
+    </script>
+</body>
+
+</html>

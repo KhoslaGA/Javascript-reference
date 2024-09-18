@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overriding</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            login() {
+                console.log(`Employee has logged in`)
+            }
+
+            logout() {
+                console.log(`Employee has logged out`)
+            }
+
+            requestLeaves(leaves) {
+                console.log(`Employee has requested ${leaves} leaves`)
+            }
+        }
+
+        class Programmer extends Employee {
+            requestCoffee(x) {
+                console.log(`Employee has requested ${x} coffees`)
+            }
+
+            requestLeaves(leaves) {
+                // console.log(`Employee has requested ${leaves + 1} leaves(one extra)`)
+                super.requestLeaves(4);
+            }
+        }
+
+
+
+        // let e = new Employee()
+        // e.login()
+        // e.requestLeaves(3);
+
+        // Same if we use Programmer
+        let e = new Programmer()
+        e.login()
+        e.requestLeaves(3);
+    </script>
+
+</body>
+
+</html>

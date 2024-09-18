@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set-4</title>
+</head>
+
+<body>
+    <script>
+        // Question 1 : What will console.log("har \" ".length)
+
+        console.log("har \" ".length);
+
+        // Question 2 : String includes function
+
+        const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+        const word = 'fox';
+        console.log(sentence.includes(word));
+        console.log(
+            `The word "${word}" ${
+    sentence.includes(word) ? 'is' : 'is not'
+  } in the sentence`,
+        );
+
+        // Question3. Startswith and Endswith Function
+        const str1 = "Cat is in the box";
+        console.log(str1.startsWith('Cat'));
+
+        const str2 = "Saturday Night plans";
+        console.log(str2.endsWith('lans'));
+
+        // Question 4.convert a string to lowercase.
+        const str3 = "GAUTAM";
+        console.log(str3.toLocaleLowerCase());
+
+        // Question 5. Extract the amount from " please give me Rs. 1000";
+        let str4 = "The amount is Rs. 1000";
+        let amount = Number.parseInt(str4.slice("The amount is Rs. ".length));
+        console.log(amount);
+
+        // Question 6. change nth character of a string
+        let str5 = "Deepika";
+        str5[3] = "R" // DID NOT CHANGE
+        console.log(friend);
+        // STRING IS NOT IMMUTABLE
+    </script>
+
+</body>
+
+</html>

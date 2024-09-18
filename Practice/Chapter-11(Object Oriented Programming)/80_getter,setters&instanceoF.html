@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter, Setter and Instance of</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(name) {
+                this._name = name;
+            }
+            fly() {
+                alert("I am Flying")
+            }
+            // _name is done because we made a getter with using name
+            // Use of Getter
+            get name() {
+                return this._name
+            }
+
+            // Use of Setter
+            set name(newName) {
+                this._name = newName;
+            }
+        }
+
+        class Rabbit extends Animal {
+            eatCarrot() {
+                alert("Rabbit is eating Carrot");
+            }
+        }
+
+        let a = new Rabbit("Bunny")
+        a.fly()
+        console.log(a.name)
+        a.name = "Bruno"
+        console.log(a.name)
+
+        // use of instanceof- to see if the element belongs to the class or not
+        let c = 56;
+        console.log(a instanceof Animal);
+        console.log(c instanceof Animal);
+        console.log(a instanceof Rabbit);
+    </script>
+
+</body>
+
+</html>

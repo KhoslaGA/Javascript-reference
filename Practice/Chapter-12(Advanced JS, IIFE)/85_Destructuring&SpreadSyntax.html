@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <!-- ! Destructuring- unpack values in an array into distinct variables -->
+
+    <script>
+        // Destructuring
+        let arr = [3, 5]
+        let [a, b] = arr;
+        console.log(a, b)
+
+        // another example with extra values
+        let arr2 = [3, 5, 7, 10, 12];
+        let [d, e, f] = arr;
+
+        // another example with extra values
+        let arr3 = [3, 5, 7, 10, 12];
+        let [a1, b1, c1, ...others] = arr3;
+        console.log(a1, b1, c1, others)
+
+        // Skipping values in destructuring
+        let arr4 = [3, 5, 7, 8, 9, 15, 20]
+        let [a2, , , c2, ...obj4] = arr4;
+        console.log(a2, c2, obj4)
+
+        // Assigning values to object keys
+        let {
+            a3,
+            b3
+        } = {
+            a3: 3,
+            b3: 5
+        }
+        console.log(a3, b3)
+
+        //SPREAD operator
+        const array = [1, 7, 11]
+        const object = {
+            ...array
+        }
+        console.log(object)
+
+        // Spread in function
+        function sum(v1, v2, v3) {
+            return v1 + v2 + v3;
+        }
+        console.log(sum(...array))
+
+        // overriding values in object (React)
+        let obj5 = {
+            name: "Gautam",
+            company: "XYX",
+            address: "ABC"
+        }
+        // This will override the object
+        console.log({
+            ...obj5,
+            name: "Harry",
+            company: "XYZ"
+        })
+
+        // This will not override the object
+        console.log({
+            name: "Bhai",
+            address: "XYZ",
+            ...obj5
+        })
+
+        const h = "the"
+        const j = "no"
+        const k = {
+            h,
+            j
+        }
+        console.log(k)
+    </script>
+
+</body>
+
+</html>

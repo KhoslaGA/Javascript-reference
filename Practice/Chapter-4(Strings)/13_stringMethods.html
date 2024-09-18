@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods in Strings</title>
+</head>
+
+<body>
+    <script>
+        // LINK TO STRING METHODS - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+        // String Length
+        let name = "gautam";
+        console.log(name.length)
+        let names = "gauta\nm";
+        console.log(names.length)
+
+        // to upper case
+        let lowercasename = "Gautam"
+        console.log(lowercasename.toUpperCase());
+
+        // to lowecase
+        let uppercasename = "GAUTAM";
+        console.log(uppercasename.toLocaleLowerCase());
+
+        // slice method- index starts from 0.
+        let fullname = "gautamkhosla"
+        console.log(fullname.slice(2, 6));
+        console.log(fullname.slice(2));
+
+        // Replace method
+        let originalname = "Gautambhai";
+        console.log(originalname.replace("bhai", "bhau"));
+
+        // Concat Method
+        let friend = "Naman"
+        console.log(friend.concat(" is a friend of", friend, "ok"));
+
+        // Trim Method
+        let friend2 = "                  Meena           ";
+        console.log(friend2.trim);
+
+        // access the value at index
+        let fr = "Shivika";
+        console.log(fr[0]);
+        console.log(fr[1]);
+
+        // for loop to print a string
+        let string = "Javascript"
+        for (key = 0; key < string.length; key++) {
+            console.log(string[key]);
+        }
+
+        // Cannot change character of string
+    </script>
+
+</body>
+
+</html>

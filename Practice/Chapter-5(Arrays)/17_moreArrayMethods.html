@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Array Methods</title>
+</head>
+
+<body>
+    <script>
+        // Delete Operator- Deletes the element but length of array remains same.
+        let num = [1, 2, 3, 4, 5, 6, 7, 8];
+        delete num[0];
+        console.log(num);
+
+        // Concat function
+        let num2 = [1, 2, 3, 4, 5, 6, 7, 8];
+        let num3 = [9, 10, 11, 12, 13, 14];
+
+        let newArray = num2.concat(num3);
+        console.log(newArray);
+        console.log(num2, num3);
+
+        // Sort method
+        let num4 = [1, 2, 3, 14, 255, 8, 9, 220];
+        num4.sort();
+        console.log(num4);
+
+        //compare arrays
+        let compare = (a, b) => {
+            return b - a;
+            num4.sort(compare);
+        }
+
+        // Splice - add new items to the array.
+        let num5 = [10, 15, 25, 67, 82, 90];
+        let Deleted = num5.splice(2, 3, 1021, 22);
+        console.log(num5);
+        console.log(Deleted);
+
+        // Slice- remove some items to the array.
+        let num6 = [1, 2, 3, 4, 5, 10];
+        let newNum = num6.slice(2)
+        let newNum2 = num6.slice(1, 3); // does not include the last
+        console.log(newNum);
+        console.log(newNum2);
+    </script>
+
+</body>
+
+</html>

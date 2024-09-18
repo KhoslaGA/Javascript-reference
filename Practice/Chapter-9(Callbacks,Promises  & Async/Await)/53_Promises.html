@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Promises</title>
+</head>
+
+<body>
+    <h1>Promises</h1>
+
+    <script>
+        // Promise is used instead of callback so different tasks performed by web application can 
+        // run simaltaneously or in parallel
+        let promise = new Promise(function (resolve, reject) {
+
+            alert(" I am an alert in promise");
+
+            resolve(56);
+        })
+        console.log("Hello")
+        setTimeout(function () {
+            console.log("Hello in 2 seconds");
+        }, 2000)
+
+        console.log("Hello i am three")
+        console.log(promise)
+    </script>
+
+
+
+
+</body>
+
+</html>

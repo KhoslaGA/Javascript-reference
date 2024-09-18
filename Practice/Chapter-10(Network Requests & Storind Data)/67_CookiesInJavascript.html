@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies in javascript</title>
+</head>
+
+<body>
+    <script>
+        // cookies are key-value pairs seperated by semi-colon(;)
+
+        console.log(document.cookie)
+        document.cookie = "name=harry11223344"
+        console.log(document.cookie)
+        // cookies are added not replaced seperated by semi-colon(;)
+        document.cookie = "name2=berry11223344"
+        console.log(document.cookie)
+        // cookies are added not replaced
+        document.cookie = "name=harry"
+        // cookie storing
+        let key = prompt("Enter your key")
+        let value = prompt("Enter your value")
+        document.cookie = `${key} = ${value}`
+        // cookies have encodeURIComponent option to encode 
+        document.cookie = `${encodeURIComponent(key)} = ${encodeURIComponent(value)}`
+        // you can use decodeURIComponent to decode
+        // decodeURIComponent(value);
+        // cookies comes with options as well
+        document.cookie = "name=harry; path = /a"
+        console.log(document.cookie)
+    </script>
+
+</body>
+
+</html>

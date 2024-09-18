@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let/Var/Const</title>
+</head>
+
+<body>
+    <p>Var was used before ES6, since var is globally scoped we dont use it anymore</p>
+    <p>Let can be changed but cant redeclared</p>
+    <p>const cannot be changed or redeclared</p>
+    <script>
+        // var a = 45;
+        // var b = "gautam";
+        var c = null;
+        var d = undefined;
+        let a = 45;
+        let b = "gautam"; {
+            let b = "this"
+            console.log(b);
+        }
+        console.log(b)
+        const author = "gautam";
+        console.log(author);
+    </script>
+
+</body>
+
+</html>

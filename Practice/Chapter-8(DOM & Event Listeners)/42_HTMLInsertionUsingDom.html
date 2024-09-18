@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Insertion Using DOM</title>
+</head>
+
+<body>
+    I am out of this container(outer)
+    <div class="container">
+        I am start of this container(inner)
+        <div id="first">I am a first element</div>
+        I am end of this container(inner)
+    </div>
+    I am out of this container(outer)
+
+
+    <script>
+        // Add to existing HTML
+        let a = document.getElementsByTagName('div')[0]
+        // a.innerHTML = a.innerHTML + "Hello World";
+
+        // appendChild property
+        let div = document.createElement('div');
+        div.innerHTML = '<h1>Hello World</h2>';
+        // a.appendChild(div);
+
+        // prepend property- becomes first element of the node
+        // a.prepend(div);
+
+        // before- puts before the node
+        // a.before(div);
+
+        // After- puts after the node
+        // a.after(div)
+
+        // Replace with- 
+        a.replaceWith(div);
+    </script>
+</body>
+
+</html>

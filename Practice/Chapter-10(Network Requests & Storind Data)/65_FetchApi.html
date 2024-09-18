@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+
+<body>
+    <script>
+        // FETCH API syntax
+        let promise = fetch("https://goweather.herokuapp.com/weather/Ny")
+        // we need 2 .then one to see if the src/promise is resolving and second to convert
+        // it into text or JSON.
+        // AJAX = Asynchronous Javascript and XML.
+
+        promise.then((response) => {
+            console.log(response.status);
+            console.log(response.ok);
+
+            //Response headers
+            console.log(response.headers)
+
+            // return response.text()
+            return response.json()
+
+        }).then((value2) => {
+            return value2.json
+
+        })
+    </script>
+
+</body>
+
+</html>

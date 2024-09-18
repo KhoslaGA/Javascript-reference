@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructors in Javascript</title>
+</head>
+
+<body>
+    <script>
+        class RailwayForm {
+
+            // contructor gets called everytime when object is created when "new" is used
+            constructor(givenname, trainno, address) {
+                console.log("CONSTRUCTOR CALLED...." + givenname + trainno)
+                this.name = givenname
+                // Name of variable and property can be same
+                this.trainno = trainno
+                this.address = address
+            }
+
+            preview() {
+                alert("This form is for train no: " + this.trainno + " your address is " + this.address)
+            }
+            submit() {
+                alert(this.name + ": Your Form is Submitted for train no:" + this.trainno)
+            }
+            cancel() {
+                alert(this.name + ": Your Form is Cancelled for train no: " + this.trainno)
+                this.trainno = 0;
+            }
+        }
+
+        let harryForm = new RailwayForm("Harry", "13488", "420, Pacific Ocean , Ocean , Bihar -000051");
+        harryForm.preview()
+        harryForm.submit()
+        harryForm.cancel()
+        harryForm.preview()
+    </script>
+
+</body>
+
+</html>

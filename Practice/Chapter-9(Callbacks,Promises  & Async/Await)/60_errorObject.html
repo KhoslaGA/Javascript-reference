@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Object </title>
+</head>
+
+<body>
+    <script>
+        // try {
+        //     harry
+        // } catch (error) {
+        //     console.log(error)
+        //     console.log(error.name)
+        //     console.log(error.message)
+        // }
+
+        // // Custom Error using Throw syntax
+        // try {
+        //     throw new Error("Harry is not good")
+        // } catch (error) {
+        //     console.log(error)
+        //     console.log(error.name)
+        //     console.log(error.message)
+        //     console.log(error.stack)
+        // }
+
+        // Example of using Custom error
+
+        try {
+            let age = prompt("enter your age")
+            age = Number.parseInt(age);
+            if (age > 180) {
+                throw new ReferenceError("This is not probably true")
+            }
+        } catch (error) {
+            console.log(error.name)
+            console.log(error.message)
+            console.log(error.stack)
+        }
+    </script>
+
+</body>
+
+</html>

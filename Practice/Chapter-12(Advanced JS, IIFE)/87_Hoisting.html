@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+
+<body>
+    <script>
+        // First 2 lines will run smoothly due ot HOISTING
+        console.log(a)
+        greet()
+        greet2()
+        greet3()
+        // greet2 will not excecute
+        // this also works 
+        function greet() {
+            console.log("Good Morning");
+        }
+        // a is declared after console.log- order doesnt matter but the value..
+        // doesnt get HOISTED
+        var a = 9;
+        // var can be used before initialization but let const cannot be used
+        console.log(a)
+
+        const greet2 = function () {
+            console.log("Good Morning will not display")
+        }
+        var greet3 = function () {
+            console.log("Good Morning will not display")
+        }
+    </script>
+
+</body>
+
+</html>

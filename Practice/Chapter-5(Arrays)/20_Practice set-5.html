@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set-5</title>
+</head>
+
+<body>
+    <script>
+        // Question 1: array of numbers, take input from user and adds the number.
+        let arr = [1, 2, 3, 4, 5, 6, 7, 83];
+
+        let a = prompt("Enter a number");
+        a = Number.parseInt(a);
+        arr.push(a)
+        console.log(arr);
+
+        // Question 2 : Keep adding numbers to array until 0 is added.
+        let arr2 = [1, 2, 4, 5, 55, 83, 27];
+        // do while loop
+        do {
+            let a2 = prompt("Enter a number");
+            a2 = Number.parseInt(a2);
+            arr.push(a2)
+            console.log(arr);
+
+        } while (a2 != 0);
+
+        // Question 3 : use filter function
+        let arr3 = [1, 2, 4, 5, 55, 60, 70, 90, 83, 27];
+        arr3.filter((x) => {
+            return x % 10 == 0;
+        })
+
+
+
+        // Question 4 
+        let arr4 = [1, 2, 4, 5, 55, 60, 70, 90, 83, 27];
+        let n = arr4.map((x) => {
+            return x * x;
+        })
+        console.log(n)
+
+        // Question 5
+        let arr5 = [1, 2, 3, 4, 5, 6, 7, 8]
+        let n2 = arr5.reduce((a, b) => {
+            return a * b;
+        })
+        console.log(n2);
+    </script>
+
+</body>
+
+</html>

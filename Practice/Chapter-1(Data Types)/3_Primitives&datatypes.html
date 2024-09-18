@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes and Primitive</title>
+</head>
+
+<body>
+    <p> Seven types of Primitive Datatypes</p>
+    <!-- nn bb ss u -->
+    <ol>
+        <li>Null</li>
+        <li>Number</li>
+        <li>Boolean</li>
+        <li>String</li>
+        <li>Undefined</li>
+        <li>Symbol</li>
+        <li>BigInt</li>
+    </ol>
+
+    <p>Non-primitive data types are objects</p>
+    <script>
+        let a = null;
+        let b = 345;
+        let c = true;
+        let d = BigInt("567");
+        let e = "Gautam";
+        let f = Symbol("I am a nice symbol");
+        let g = undefined;
+        console.log(typeof d);
+
+        // objects- Non primitive data types
+        const item = {
+            "Harry": true,
+            "Shubh": false,
+            "Lovish": 67,
+            "Rohan": undefined
+        }
+        console.log(item["Harry"]);
+    </script>
+
+</body>
+
+</html>

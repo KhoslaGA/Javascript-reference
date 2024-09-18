@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance and Extends Keyword</title>
+</head>
+
+<body>
+
+    <!-- ! USING EXTENDS CLASS -->
+    <script>
+        class RailwayForm {
+            constructor(givenname, trainno, address) {
+                console.log("CONSTRUCTOR CALLED...." + givenname + trainno)
+                this.name = givenname
+                // Name of variable and property can be same
+                this.trainno = trainno
+                this.address = address
+            }
+
+
+            preview() {
+                alert("This form is for train no: " + this.trainno + " your address is " + this.address)
+            }
+            submit() {
+                alert(this.name + ": Your Form is Submitted for train no:" + this.trainno)
+            }
+            cancel() {
+                alert(this.name + ": Your Form is Cancelled for train no: " + this.trainno)
+                this.trainno = 0;
+            }
+        }
+
+        class Metro extends RailwayForm {
+
+
+            constructor(givenname, trainno, address, direction) {
+                // This calls the constructor of the parent class
+                super(givenname, trainno, address);
+                this.direction = direction
+
+            }
+
+            Direction() {
+                alert("Your are going " + this.direction + " in the train number: " +
+                    this.trainno)
+            }
+        }
+
+        let rail = new RailwayForm("Gautam", "1234567", "Toronto Canada")
+        let metrorail = new Metro("Gautam", "1234567", "Toronto Canada", "Southbound")
+
+        rail.cancel()
+        metrorail.Direction()
+        metrorail.cancel()
+    </script>
+
+</body>
+
+</html>

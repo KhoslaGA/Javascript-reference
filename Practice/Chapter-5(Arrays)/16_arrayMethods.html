@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <script>
+        // Array Methods
+        let num = [1, 2, 3, 4, 56, 78];
+
+        // array to string
+        let b = num.toString();
+
+        // join method
+        let c = num.join(" and ");
+        console.log(c, typeof c);
+
+        // pop method- slices the last element
+        let d = num.pop();
+        console.log(num);
+
+        // push method- Adds new element at the end of array
+        let e = num.push(56);
+        console.log(num.length);
+
+        // shift method- Removes first element of the array and returns the new length.
+        let r = num.shift()
+        console.log(r, num);
+
+        // unshift method - Adds element at the begining and returns the new length
+        let s = num.unshift(78);
+        console.log(s, num);
+
+        // delete method - delete is a operator not method. 
+        delete num[2];
+        console.log(num);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessions Storage</title>
+</head>
+
+<body>
+    <script>
+        let key = prompt("What do want to store")
+        let value = prompt("What is your name")
+        //1.setItem
+        sessionStorage.setItem(key, value)
+
+        //2.getItem
+        sessionStorage.getItem(key, value)
+
+        //3. clear
+        sessionStorage.clear()
+
+        //4. removeItem
+        sessionStorage.removeItem("name")
+
+        //5. removeItem
+        sessionStorage.removeItem("name")
+
+        // windows.onstorage
+        window.onstorage = (e) => {
+            alert("changed")
+            console.log(e)
+        }
+    </script>
+
+</body>
+
+</html>

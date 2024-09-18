@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch break statement</title>
+</head>
+
+<body>
+    <script>
+        // question 1 : find if age lies betweeen 10 and 20.
+        let age = prompt("What is ur age");
+        age = parseInt(age);
+
+        if (age > 10 && age < 20) {
+
+            console.log("Age lies between 10 and 20");
+        } else {
+            console.log("Age doesnt lie between 10 and 20")
+        }
+
+        // question 2 : Demonstrate switch case statements
+
+        let ages = prompt("what is your age")
+        switch (ages) {
+            case '12':
+                console.log("your age is 12")
+            case '13':
+                console.log("your age is 13")
+            case '14':
+                console.log("your age is 14")
+            case '15':
+                console.log("your age is 15")
+            default:
+                console.log("Your age is not special");
+        }
+
+        // Question 3 : Divisible by 2 and 3
+
+        let num = prompt("enter the number");
+
+        if (num % 2 == 0 && num % 3 === 0) {
+            console.log("Number is divisible by 2 and 3")
+        } else {
+            console.log("Number is not divisible by 2 and 3")
+        }
+
+        // Question 4 : You can drive or not ?
+        let driverage = 19;
+        let a = driverage > 18 ? " you can Drive" : "You cannot drive"
+        console.log(a)
+    </script>
+
+</body>
+
+</html>

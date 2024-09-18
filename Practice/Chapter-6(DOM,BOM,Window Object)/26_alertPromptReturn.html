@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Prompt and Return</title>
+</head>
+
+<body>
+    <p>Hello World</p>
+    <script>
+        // Alert- Alert message
+        alert("Hello your script works!");
+        let a = prompt("Enter your value of a!", "328");
+        a = Number.parseInt(a);
+        alert("You entered a of type" + (typeof a));
+        // confirm- asks the question in dialog box
+        let write = confirm("Do you want to write it to the page");
+        if (write) {
+            document.write(a)
+        } else {
+            document.write("Please allow me to write");
+        }
+    </script>
+
+</body>
+
+</html>

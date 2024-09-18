@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set 8</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .bulb {
+            background: yellow;
+        }
+
+        .bulbcontainer {
+            height: 341px;
+            width: 341px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- !Answer 1 -->
+    <button onclick="alert('Please give me one plate of Noodles')">Noodles</button>
+    <button onclick="alert('Please give me one plate of Burger')">Burger</button>
+    <button onclick="alert('Please give me one plate of Patty')">Patty</button>
+
+    <!-- !Answer 2 -->
+    <h1>Bookmarks</h1>
+    <a href="https://google.com"><button id="google">Google</button></a>
+    <a href="https://fb.com"><button id="facebook">Facebook</button></a>
+    <a href="https://twitter.com"><button id="Twitter">Twitter</button></a>
+
+    <!-- ! Answer 3 -->
+    <h1>Bookmarks using Event listner</h1>
+    <a href="https://google.com"><button id="google" style="font-weight: bolder;">Google</button></a>
+
+
+    <!-- ! Answer 4  -->
+
+    <!-- ! Answer 5 -->
+    <br />
+
+    <script>
+        // Eventlistner
+        document.getElementById("google").addEventListener("click", function () {
+            window.location = "http;//google.com"
+        })
+
+        const fetchContent = async (url) => {
+            con = await fetch(url);
+            let a = await con.json()
+            return a;
+        }
+
+        // API fetch using SetInterval
+        setInterval(async function () {
+            let url = "API"
+            console.log(await fetchContent(url))
+        }, 3000);
+    </script>
+</body>
+
+</html>

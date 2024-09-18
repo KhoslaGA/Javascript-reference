@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately Invoked Functions</title>
+</head>
+
+<body>
+    <script>
+        let a = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(456)
+                }, 4000)
+            })
+        }
+
+        let f = async () => {
+            let c = await a(456)
+            console.log(c)
+
+            let d = await a()
+            console.log(d)
+
+            let e = await a()
+            console.log(e)
+        }
+        f();
+
+        // IIFE way of defining this f function- using this variables global space is not 
+        // used up 
+
+        (async () => {
+            let c = await a
+            console.log(c)
+
+            let d = await a
+            console.log(d)
+
+            let e = await a
+            console.log(e)
+        })()
+    </script>
+
+</body>
+
+</html>

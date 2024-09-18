@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Object</title>
+</head>
+
+<body>
+    <script>
+        //console.log
+        console.log(console);
+
+        //console.error
+        console.error("hey this is an error");
+
+        //console.assert
+        console.assert(5 > 52);
+        console.assert(55 > 5);
+
+        //console.clear
+        console.clear();
+
+        //console.table
+        obj = {
+            a: 1,
+            b: 2,
+            c: 3
+        }
+        console.table(obj);
+
+        //console.warn
+        console.warn("Please dont drink soda");
+
+        //console.info
+        console.info("This is an important");
+
+        //console.timeend- time to run something
+        console.time("forLoop");
+        for (i = 0; i < 10; i++) {
+            console.log(233);
+        }
+        console.timeEnd("forLoop");
+
+        console.time("whileLoop");
+        let j = 0;
+        while (j < 10) {
+            console.log(233)
+            j++;
+        }
+        console.timeEnd("whileLoop");
+    </script>
+
+</body>
+
+</html>

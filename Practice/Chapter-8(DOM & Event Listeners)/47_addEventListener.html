@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listener</title>
+</head>
+
+<body>
+    <div>
+        <button id="btn">Click me</button>
+    </div>
+    <script>
+        let x = function (e) {
+            alert("Hello World 1!")
+        }
+
+        let y = function (e) {
+            alert("Hello World 2!")
+        }
+
+        btn.addEventListener('click', x)
+
+        btn.addEventListener('click', y);
+
+        let a = prompt("What is your favourite number?");
+
+        if (a == "2") {
+            btn.removeEventListener('click', x)
+        }
+
+        // The Event Object
+        let z = function (event) {
+            // e is the event
+            alert("Hello World 1!")
+            console.log(event)
+            console.log(event.target)
+
+        }
+    </script>
+
+</body>
+
+</html>

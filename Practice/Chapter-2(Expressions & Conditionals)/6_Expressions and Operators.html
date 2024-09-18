@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressions and Operators </title>
+
+</head>
+
+<body>
+    <p>Operators in JS</p>
+
+    <script>
+        a = 45;
+        b = 4;
+        // 1.Arithematic operators
+        console.log("a + b =", a + b);
+        console.log("a - b =", a - b);
+        console.log("a / b =", a / b);
+        console.log("a % b =", a % b);
+        console.log("a ** b =", a ** b);
+        console.log("a++ =", a++);
+        console.log("a-- =", a--);
+        console.log("++a =", ++a);
+        console.log("--a =", --a);
+
+        // 2.Assignment operators
+        c = 8;
+        console.log(c);
+        c += 5; // same as c = c+5;
+        console.log(c);
+        // others included -=, *=, %= etc.
+
+        // 3.Comparison operators
+        let comp1 = 6;
+        let comp2 = "6";
+        console.log("comp1 == comp2 is", comp1 == comp2)
+        console.log("comp1 != comp2 is", comp1 != comp2)
+        console.log("comp1 === comp2 is", comp1 === comp2)
+        console.log("comp1 !== comp2 is", comp1 !== comp2)
+        // == only looks at value not type whereas === looks at both.
+
+        // 4. Logical Operators
+
+        let x = 5;
+        let y = 6;
+        console.log(x > y && x == 5);
+        // && both conditions must be true
+        // || either one must be true
+        console.log(!false);
+    </script>
+
+</body>
+
+</html>
